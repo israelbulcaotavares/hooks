@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React,   { useContext, useEffect } from "react";
 import PageTitle from "../../components/layout/PageTitle";
 import SectionTitle from "../../components/layout/SectionTitle";
 
@@ -6,7 +6,13 @@ import DataContext from "../../data/DataContext";
 import { AppContext } from "../../data/Store";
 
 const UseContext = (props) => {
+
+
+  //Ex 01
   const { state, setState } = useContext(DataContext);
+ 
+ //Ex 02
+  const { number , text, setNumber, setText  } = useContext(AppContext)
 
   function addNumber(delta) {
     setState({
@@ -15,13 +21,13 @@ const UseContext = (props) => {
     });
   }
 
-  const { number , text, setNumber,setText  } = useContext(AppContext)
+  useEffect(function() {
+    if(number > 1250) {
+      setText('Eita!!!')
+    }
+  },[number])
 
-  // useEffect(function() {
-  //   if(number > 1250) {
-  //     setText('Eita!!!')
-  //   }
-  // },[number])
+  
 
   return (
     <div className="UseContext">

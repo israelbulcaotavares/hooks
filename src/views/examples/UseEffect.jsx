@@ -10,10 +10,12 @@ function calcFatorial(num) {
 }
 
 const UseEffect = (props) => {
-  //Ex #01
+
   const [number, setNumber] = useState(1);
   const [fatorial, setFatorial] = useState(1);
+  const [status, setStatus] = useState("Ímpar");
 
+  //Ex #01
   useEffect(
     function () {
       /* Vc muda os dados, e ao mudar esses dados vai impactar em outra parte da aplicação */
@@ -32,11 +34,10 @@ const UseEffect = (props) => {
   );
 
   // Ex #02
-  const [status, setStatus] = useState("Ímpar");
-  
-  useEffect(function(){
-    setStatus(number % 2 === 0 ? 'Par' : 'Ímpar')
-  },[number])
+  useEffect(
+    function () {
+      setStatus(number % 2 === 0 ? "Par" : "Ímpar");
+    },[number]);
 
   return (
     <div className="UseEffect">

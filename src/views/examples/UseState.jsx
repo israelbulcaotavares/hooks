@@ -16,6 +16,7 @@ const UseState = (props) => {
             <div className="center">
                 <span className="text">{count}</span>
                 <div>
+                <button className="btn" onClick={ () => setCount(0)}>  0</button>
                 <button className="btn" onClick={ () => setCount(count - 1 )}>  -1 </button>
                 <button className="btn" onClick={ () => setCount(count + 1 )}> +1 </button>
                 <button className="btn" onClick={ () => setCount( 1000 )}> 1000 </button>
@@ -24,6 +25,7 @@ const UseState = (props) => {
             
             </div>
             <SectionTitle title="Exercício #02" />
+            {/* Ativando input para teclar e setar informações */}
             <input type="text" className="input" 
                 value={name} onChange={e => setName(e.target.value)}
             />

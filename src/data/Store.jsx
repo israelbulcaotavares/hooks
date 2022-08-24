@@ -13,8 +13,7 @@ const Store = (props) => {
      function updateState(key, value) {
         setState({
             ...state,
-            [key]: value
-
+            [key]: value 
         })
      }   
 
