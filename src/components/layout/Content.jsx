@@ -12,6 +12,7 @@ import UseMemo from '../../views/examples/UseMemo'
 import UseContext from '../../views/examples/UseContext'
 import UseReducer from '../../views/examples/UseReducer'
 import UseCustom from '../../views/examples/UseCustom'
+import UseMyCustomHook from '../../views/examples/UseMyCustomHook'
 
 const Content = props => (
     <main className="Content">
@@ -42,6 +43,9 @@ const Content = props => (
             </Route>
             <Route path="/useCustom">
                 <UseCustom />
+            </Route>
+            <Route path="/UseMyCustomHook">
+                <UseMyCustomHook />
             </Route>
             <Route path="*">
                 <NotFound />

@@ -34,6 +34,9 @@ const Menu = props => (
                 <li>
                     <Link to="/useCustom">useMyHook()</Link>
                 </li>
+                <li>
+                    <Link to="/UseMyCustomHook">UseMyCustomHook()</Link>
+                </li>
             </ul>
         </nav>
     </aside>
